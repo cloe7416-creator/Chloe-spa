@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chloé Spa — Massage & bien-être. Réservation sur WhatsApp.">
+  <title>Chloé Spa — Massage & Bien-être</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    :root{--red:#a9152b;--red-dark:#720b1b;--red-soft:#f8e5e9;--white:#fff;--ink:#24191b;--muted:#6f6062;--line:#eadbdd;--shadow:0 18px 50px rgba(100,18,30,.12);--radius:22px}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:#fff}
+    a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #f0e5e6}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{font-family:Parisienne,cursive;color:var(--red);font-size:35px;line-height:1}
+    .logo small{display:block;font-family:"DM Sans";font-size:8px;letter-spacing:4px;text-align:center;color:#8d656b;margin-top:-2px}
+    .links{display:flex;gap:28px;font-size:14px;color:#4f383b}.links a:hover{color:var(--red)}
+    .wa-top,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:700}
+    .wa-top{background:var(--red);color:#fff;padding:13px 20px;font-size:14px}
+    .hero{min-height:650px;display:grid;place-items:center;position:relative;overflow:hidden;background:#5f0a16;color:#fff}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(60,4,13,.88),rgba(100,8,25,.58),rgba(60,4,13,.18))}
+    .hero-inner{position:relative;z-index:1;width:min(1160px,92%);display:grid;grid-template-columns:1fr .9fr;gap:60px;align-items:center}
+    .eyebrow{letter-spacing:5px;font-size:12px;text-transform:uppercase;opacity:.9}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(58px,8vw,100px);line-height:.95;margin:18px 0 8px;font-weight:500}
+    .script{font-family:Parisienne,cursive;font-size:54px;color:#ffd8dd}
+    .hero p{font-size:18px;line-height:1.7;max-width:560px;color:#ffecef}
+    .hero-card{height:470px;border-radius:32px;overflow:hidden;box-shadow:0 35px 90px rgba(45,0,8,.3);border:1px solid rgba(255,255,255,.35);position:relative}
+    .hero-card img{width:100%;height:100%;object-fit:cover}
+    .hero-card div{position:absolute;left:22px;right:22px;bottom:22px;background:rgba(255,255,255,.93);color:var(--ink);border-radius:18px;padding:20px}
+    .hero-card strong{display:block;font-family:"Playfair Display";font-size:24px;margin-bottom:5px}
+    .btn{padding:16px 24px;background:#fff;color:var(--red);border:0;cursor:pointer;font-size:14px}.btn.red{background:var(--red);color:#fff}
+    .section{padding:92px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .kicker{color:var(--red);text-transform:uppercase;letter-spacing:4px;font-size:11px;font-weight:700}
+    h2{font-family:"Playfair Display";font-size:48px;margin:10px 0 12px;font-weight:500}.section-head p{color:var(--muted);line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(60,10,18,.06);transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .card-top{height:210px;overflow:hidden}.card-top img{width:100%;height:100%;object-fit:cover;transition:.4s}.card:hover .card-top img{transform:scale(1.05)}
+    .card-body{padding:22px}.card h3{font-family:"Playfair Display";font-size:21px;margin:0 0 8px}
+    .card p{font-size:13px;color:var(--muted);line-height:1.55;min-height:62px}.price{color:var(--red);font-weight:700;margin-top:14px}
+    .center{text-align:center;margin-top:34px}
+    .booking{background:linear-gradient(120deg,#8c0d1d,#d91d3b);color:#fff}.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+    .booking h2{margin-top:8px}.booking-copy p{color:#ffe8eb;line-height:1.7}
+    form{background:#fff;border-radius:26px;padding:28px;color:var(--ink);box-shadow:0 20px 60px rgba(54,0,9,.25)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:12px;font-weight:700;color:#5d4448;display:block;margin-bottom:6px}
+    input,select,textarea{width:100%;border:1px solid #eadbdd;border-radius:12px;padding:13px 14px;font:inherit;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px #fbe8eb}textarea{min-height:100px;resize:vertical}
+    .field{margin-bottom:14px}form .btn{width:100%;margin-top:4px}.note{font-size:11px;color:#7d6b6e;text-align:center;margin:12px 0 0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .about-box{height:430px;border-radius:30px;overflow:hidden;position:relative;box-shadow:var(--shadow)}.about-box img{width:100%;height:100%;object-fit:cover}
+    .about-box:after{content:"CHLOÉ SPA";position:absolute;inset:0;display:grid;place-items:center;font-family:Parisienne;font-size:64px;color:rgba(255,255,255,.9);text-shadow:0 3px 20px rgba(0,0,0,.25);transform:rotate(-8deg)}
+    .points{display:grid;gap:18px;margin-top:28px}.point{display:flex;gap:14px;align-items:flex-start}
+    .icon{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center;color:var(--red);font-weight:700}
+    .point strong{display:block;margin-bottom:4px}.point span{font-size:14px;color:var(--muted);line-height:1.5}
+    .contact{background:#fff6f7}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact-card{background:#fff;border:1px solid var(--line);padding:25px;border-radius:20px}.contact-card h3{margin:0 0 8px;font-family:"Playfair Display";font-size:22px}.contact-card p{color:var(--muted);line-height:1.6;margin:0}
+    footer{background:#760b1a;color:#ffecef;padding:35px 0}.footer-row{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer-row .logo{color:#fff}.footer-small{font-size:12px;opacity:.8}
+    .floating-wa{position:fixed;right:22px;bottom:22px;z-index:30;background:#25D366;color:#fff;border-radius:999px;padding:15px 19px;font-weight:700;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+    .menu{display:none;border:0;background:none;font-size:28px;color:var(--red)}
+    @media(max-width:900px){.links{display:none}.menu{display:block}.nav{height:68px}.hero-inner,.booking-grid,.about{grid-template-columns:1fr}.hero{padding:70px 0}.hero-card{height:390px}.cards{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}h2{font-size:40px}.script{font-size:44px}}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.section{padding:68px 0}.hero{min-height:700px}.hero p{font-size:16px}.floating-wa{right:14px;bottom:14px}.footer-row{flex-direction:column;text-align:center}h1{font-size:58px}.hero-card{height:360px}}
+  </style>
+</head>
+<body>
+<header><div class="container nav">
+  <a class="logo" href="#accueil">Chloé Spa<small>BIEN-ÊTRE · DÉTENTE · ÉVASION</small></a>
+  <nav class="links"><a href="#accueil">Accueil</a><a href="#massages">Nos massages</a><a href="#apropos">À propos</a><a href="#reservation">Réservation</a><a href="#contact">Contact</a></nav>
+  <a class="wa-top" href="https://wa.me/33644674209" target="_blank" rel="noopener">◔ WhatsApp</a>
+  <button class="menu" aria-label="Menu">☰</button>
+</div></header>
+
+<main>
+<section id="accueil" class="hero">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1800&q=85" alt="Ambiance spa et détente">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Bien-être · détente · évasion</div><h1>CHLOÉ SPA</h1><div class="script">L'art du massage</div>
+      <p>Un moment de détente et d'élégance pensé pour vous. Chloé Spa propose des séances dans plusieurs villes en France.</p>
+      <p>📍 <strong>Plusieurs villes en France</strong><br><span style="font-size:14px">Indiquez votre ville lors de votre demande, nous vous orienterons ensuite.</span></p>
+      <a class="btn" href="#reservation">RÉSERVER UNE SÉANCE →</a>
+    </div>
+    <div class="hero-card"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=85" alt="Massage relaxant">
+      <div><strong>Votre moment de détente</strong><span>Réservation simple et rapide directement sur WhatsApp.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="massages" class="section"><div class="container">
+  <div class="section-head"><div class="kicker">Nos prestations</div><h2>Nos massages</h2><p>Découvrez une sélection de prestations adaptées à vos envies et à votre moment de détente.</p></div>
+  <div class="cards">
+    <article class="card"><div class="card-top"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=85" alt="Massage relaxant"></div><div class="card-body"><h3>Massage Relaxant</h3><p>Un massage doux pour relâcher les tensions et favoriser une profonde détente.</p><div class="price">À partir de 75 €</div></div></article>
+    <article class="card"><div class="card-top"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=85" alt="Massage aux huiles"></div><div class="card-body"><h3>Massage aux Huiles</h3><p>Des huiles et des gestes enveloppants pour un moment de relaxation.</p><div class="price">À partir de 90 €</div></div></article>
+    <article class="card"><div class="card-top"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=85" alt="Ambiance bien-être"></div><div class="card-body"><h3>Massage Sensuel</h3><p>Une expérience de massage enveloppante dans une ambiance intime et élégante.</p><div class="price">À partir de 120 €</div></div></article>
+    <article class="card"><div class="card-top"><img src="https://images.unsplash.com/photo-1544161497-7c1d0d8f1e3b?auto=format&fit=crop&w=900&q=85" alt="Massage du corps"></div><div class="card-body"><h3>Massage du Corps</h3><p>Un massage complet pour prendre soin du corps et relâcher les tensions musculaires.</p><div class="price">À partir de 100 €</div></div></article>
+    <article class="card"><div class="card-top"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85" alt="Détente absolue"></div><div class="card-body"><h3>Détente Absolue</h3><p>Une parenthèse complète pour ralentir, respirer et profiter pleinement du moment.</p><div class="price">Sur demande</div></div></article>
+  </div>
+  <div class="center"><a class="btn red" href="#reservation">VOIR / DEMANDER LES PRESTATIONS →</a></div>
+</div></section>
+
+<section id="reservation" class="section booking"><div class="container booking-grid">
+  <div class="booking-copy"><div class="kicker" style="color:#ffd1d8">Réservez votre moment</div><h2>Demande de réservation</h2><p>Remplissez le formulaire. Votre demande sera préparée automatiquement et envoyée dans WhatsApp pour faciliter votre prise de contact.</p><p><strong>Tarifs :</strong> de 75 € à 250 € selon la prestation et la durée.</p></div>
+  <form id="bookingForm">
+    <div class="grid2"><div class="field"><label for="name">Prénom</label><input id="name" required placeholder="Votre prénom"></div><div class="field"><label for="city">Ville</label><input id="city" required placeholder="Votre ville en France"></div></div>
+    <div class="grid2"><div class="field"><label for="service">Massage souhaité</label><select id="service" required><option value="">Choisir</option><option>Massage Relaxant</option><option>Massage aux Huiles</option><option>Massage Sensuel</option><option>Massage du Corps</option><option>Détente Absolue</option></select></div><div class="field"><label for="duration">Durée</label><select id="duration"><option>À définir</option><option>30 min</option><option>60 min</option><option>75 min</option><option>90 min</option><option>120 min</option></select></div></div>
+    <div class="grid2"><div class="field"><label for="date">Date souhaitée</label><input id="date" type="date"></div><div class="field"><label for="time">Heure souhaitée</label><input id="time" type="time"></div></div>
+    <div class="field"><label for="phone">Votre WhatsApp</label><input id="phone" type="tel" placeholder="+33 ..."></div>
+    <div class="field"><label for="message">Message (optionnel)</label><textarea id="message" placeholder="Une précision à nous communiquer ?"></textarea></div>
+    <button class="btn red" type="submit">☏ ENVOYER MA DEMANDE SUR WHATSAPP</button><div class="note">Votre demande ouvre WhatsApp avec un message prérempli. Vous pourrez le vérifier avant l'envoi.</div>
+  </form>
+</div></section>
+
+<section id="apropos" class="section"><div class="container about">
+  <div class="about-box"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=85" alt="Moment de détente Chloé Spa"></div>
+  <div><div class="kicker">Pourquoi Chloé Spa ?</div><h2>Une parenthèse rien qu'à vous.</h2><p style="color:var(--muted);line-height:1.8">Nous privilégions une atmosphère chaleureuse, soignée et discrète afin de vous offrir un véritable moment de détente.</p>
+    <div class="points"><div class="point"><div class="icon">✦</div><div><strong>Professionnalisme</strong><span>Une approche attentive et personnalisée.</span></div></div><div class="point"><div class="icon">♢</div><div><strong>Ambiance élégante</strong><span>Un cadre pensé pour votre confort.</span></div></div><div class="point"><div class="icon">✓</div><div><strong>Réservation simple</strong><span>Un contact direct et rapide sur WhatsApp.</span></div></div></div>
+  </div>
+</div></section>
+
+<section id="contact" class="section contact"><div class="container"><div class="section-head"><div class="kicker">Contact</div><h2>Parlons de votre séance</h2><p>Indiquez votre ville et nous vous orienterons vers les disponibilités adaptées.</p></div>
+  <div class="contact-grid"><div class="contact-card"><h3>WhatsApp</h3><p>+33 6 44 67 42 09<br><br><a class="btn red" href="https://wa.me/33644674209" target="_blank" rel="noopener">Ouvrir WhatsApp</a></p></div><div class="contact-card"><h3>Villes</h3><p>Plusieurs villes en France.<br>Précisez simplement votre ville lors de votre demande.</p></div><div class="contact-card"><h3>Tarifs</h3><p>Prestations à partir de 75 € et jusqu'à 250 €, selon la séance choisie.</p></div></div>
+</div></section>
+</main>
+
+<footer><div class="container footer-row"><div class="logo">Chloé Spa</div><div class="footer-small">© 2026 Chloé Spa — Tous droits réservés.</div><div class="footer-small">Bien-être · Détente · Évasion</div></div></footer>
+<a class="floating-wa" href="https://wa.me/33644674209" target="_blank" rel="noopener" aria-label="Contacter Chloé Spa sur WhatsApp">◔ WhatsApp · 06 44 67 42 09</a>
+
+<script>
+const form=document.getElementById('bookingForm');
+form.addEventListener('submit',function(e){
+ e.preventDefault();
+ const v=id=>document.getElementById(id).value.trim();
+ const lines=["Bonjour Chloé Spa,","","Je souhaite faire une demande de réservation.","Prénom : "+v("name"),"Ville : "+v("city"),"Massage : "+v("service"),"Durée : "+v("duration"),"Date : "+(v("date")||"À définir"),"Heure : "+(v("time")||"À définir"),"Mon WhatsApp : "+(v("phone")||"Non renseigné"),"Message : "+(v("message")||"Aucun")];
+ window.open("https://wa.me/33644674209?text="+encodeURIComponent(lines.join("\n")),"_blank","noopener");
+});
+</script>
+</body>
+</html>
